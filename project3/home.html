@@ -1,0 +1,316 @@
+<html>
+    <head>
+        <title>Lei Chen</title>
+        <meta charset="utf-8">
+        <!--       The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+        <script src="jquery-3.3.1.min.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="design.css">
+    </head>
+    <body>
+        <!--myInfo-------------------------------------------->
+        <h1 class="systemTitle">ANIMAL KINGDOM CONTROL BOARD</h1>
+        <div class="row1">
+            
+            <div class="column1">
+                <center>
+                    <h1 class="sections1">GATE LOCKS</h1>
+                    <h4 class="sections1-2">Manage gate locks for differnt animal pens</h4>
+                    <button class="selection1-1" id="selection1-1">Lock All</button>
+                    <button class="selection1-2" id="selection1-2">Unlock All</button>
+                </center>
+
+                <button class="accordion1">Click to Expand Section</button>
+
+                <!-----------Check Box---------------->
+                <div class="control1">
+                    <div class="control-border">
+                        <div class="switchList">
+                            <label class="switch">
+                                <input name="lockAll" type="checkbox">
+                                <div id="sliderLock" class="slider round"></div>
+                                <span class="discribtion">Gate for Bird</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input name="lockAll" type="checkbox">
+                                <div id="sliderLock" class="slider round"></div>
+                                <span class="discribtion">Gate for Mammals</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input name="lockAll" type="checkbox">
+                                <div id="sliderLock" class="slider round"></div>
+                                <span class="discribtion">Gate for Fishes</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input name="lockAll" type="checkbox">
+                                <div id="sliderLock" class="slider round"></div>
+                                <span class="discribtion">Gate for Insects</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!------------------------------------------>
+            <div class="column2">
+                <center>
+                    <h1 class="sections2">ANIMAL FEED</h1>
+                    <h4 class="sections2-2">Feeding systems for different animal pens</h4>
+                    <button class="selection2-1" id="selection2-1">Feed All Max</button>
+                    <button class="selection2-2" id="selection2-2">Feed All Min</button>
+                </center>
+
+                <button class="accordion2">BIRDS</button>
+                <!-----------Check Box---------------->
+                <div class="control2">
+                    <div class="control-border">
+                        <div class=animal1>
+                            <p class="animal1FeedError"><b>Days haven feed Enough: </b><a id="animal1FeedDate">None</a></p>
+                            <button type="button" class="animal1M" id="num-jian1">-</button>
+                            <input type="text" required="required" value=5 class="animal1I" id="input-num1">
+                            <button type="button" class="animal1A" id="num-jia1">+</button>
+                            <button type="button" class="animal1feed" id="animal1feed">Click to Feed</button>
+                            <p id="animal1Error"></p>
+                            <br>
+                            <p class="animal1FeedCount"><b>TOTAL FEEDED TODAY: </b><a id="animal1FeedCount">0 KG.</a></p>
+                            <p class="animal1Date"><b>LAST TIME FEEDED: </b><a id="animal1Date">Unknow</a></p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button class="accordion3">MAMMALS</button>
+                <!-----------Check Box---------------->
+                <div class="control3">
+                    <div class="control-border">
+                        <div class=animal2>
+                            <p class="animal2FeedError"><b>Days haven feed Enough: </b><a id="animal2FeedDate">None</a></p>
+                            <button type="button" class="animal2M" id="num-jian2">-</button>
+                            <input type="text" required="required" value="5" class="animal2I" id="input-num2">
+                            <button type="button" class="animal2A" id="num-jia2">+</button>
+                            <button type="button" class="animal2feed" id="animal2feed">Click to Feed</button>
+                            <p id="animal2Error"></p>
+                            <br>
+                            <p class="animal2FeedCount"><b>TOTAL FEEDED TODAY: </b><a id="animal2FeedCount">0 KG.</a></p>
+                            <p class="animal2Date"><b>LAST TIME FEEDED: </b><a id="animal2Date">Unknow</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="accordion4">FISHES</button>
+                <!-----------Check Box---------------->
+                <div class="control4">
+                    <div class="control-border">
+                        <div class=animal3>
+                            <p class="animal3FeedError"><b>Days haven feed Enough: </b><a id="animal3FeedDate">None</a></p>
+                            <button type="button" class="animal3M" id="num-jian3">-</button>
+                            <input type="text" required="required" value="5" class="animal3I" id="input-num3">
+                            <button type="button" class="animal3A" id="num-jia3">+</button>
+                            <button type="button" class="animal3feed" id="animal3feed">Click to Feed</button>
+                            <p class="animal3Error" id="animal3Error"></p>
+                            <br>
+                            <p class="animal3FeedCount"><b>TOTAL FEEDED TODAY: </b><a id="animal3FeedCount">0 KG.</a></p>
+                            <p class="animal3Date"><b>LAST TIME FEEDED: </b><a id="animal3Date">Unknow</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div> 
+            <!------------------------------------------>
+            <div class="column3">
+                <center>
+                    <h1 class="sections3">PARK SETTING</h1>
+                    <h4 class="sections3-2">Sprinkler systems for different park zones</h4>
+                    <button class="selection3-1" id="selection3-1">Turn on All</button>
+                    <button class="selection3-2" id="selection3-2">Turn off All</button>
+                    
+                    <p id="section3reminder"></p>
+                </center>
+
+                <button class="accordion5">Make Schedule</button>
+                <!-----------Check Box---------------->
+                <div class="control5">
+                    <div class="control-border">
+                        <div class="schedule1">
+                            <label for="fDate" class="fDateLabel"> From Date</label><br>
+                            <input type="time" 
+                                   required="required" name="fromtime"  class="fromtime" 
+                                   id="fromtime" 
+                                   value="00:00:00">
+
+                            <input type="date" required="required" name="fromDate" 
+                                   id="fromDate" class="fromDate" value="2021-03-28">
+                            <br>
+                            <label for="toDate" class="tDateLabel"> To Date</label><br>
+                            <input type="time" 
+                                   required="required" name="totime"  
+                                   id="totime" class="totime" value="00:00:00">
+                            <input type="date" required="required" name="toDate" class="toDate" id="toDate" value="2021-03-29">
+                            <p id="DateError"></p>
+                            <br>
+
+                            <div class="checkbox1-1">
+                                <h5 class="checkboxD">Different Park Zone</h5>
+                                <input type="checkbox" id="park1" name="park1" class= ><label class="parkL1">Park1</label>
+                                <input type="checkbox" id="park2" name="park2"><label class="parkL2">Park2</label>
+                                <input type="checkbox" id="park3" name="park3"><label class="parkL3">Park3</label>
+                                <p id="checkbox1Error"></p>
+                            </div>
+
+                            <div class="checkbox1-2">
+                                <h5 class="checkboxD">Type of Spinkler</h5>
+                                <input type="checkbox" id="RedLight" name="RedLight"><label class="lightL1">Red Light</label>
+                                <input type="checkbox" id="BlueLight" name="BlueLight" ><label class="lightL2">Blue Light</label><br>
+                                <input type="checkbox" id="YellowLight" name="YellowLight"><label class="lightL3">Yellow Light</label>
+                                <input type="checkbox" id="Sprinkler" name="Sprinkler"><label class="lightL4">Other</label>
+                                <p id="checkbox2Error"></p>
+                            </div>
+                           
+                            <button class="ok" id="ok">Set the Schedule
+                            <span class="popuptext" id="myPopup">You've Successfully schedule a time!</span></button>
+                            
+                             <button class="reset" id="reset">Reset Checkbox</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="accordion6">Park1: Zone ABCD</button>
+                <!-----------Check Box---------------->
+                <div class="control6">
+                    <div class="control-border">
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park1R">
+                                <div class="slider round"></div>
+                                <span class="discribtion" >Red Light</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park1Y">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Yellow Light</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park1B">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Blue Light</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park1S">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Other</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="accordion7">Park2: Zone EFGH</button>
+                <!-----------Check Box---------------->
+                <div class="control7">
+                    <div class="control-border">
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park2R">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Red Light</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park2Y">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Yellow Light</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park2B">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Blue Light</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park2S">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Other</span>
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <button class="accordion8">Park3: Zone IJKL</button>
+                <!-----------Check Box---------------->
+                <div class="control8">
+                    <div class="control-border">
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park3R">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Red Light</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park3Y">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Yellow Light</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park3B">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Blue Light</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="switchList">
+                            <label class="switch">
+                                <input type="checkbox" name="park3S">
+                                <div class="slider round"></div>
+                                <span class="discribtion">Sprinkler</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <script src="homejs.js"></script>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE> Light </TITLE>
+        <STYLE>
+            #border {
+                height:600px;
+                margin: auto;
+                background: 'black';
+                position: relative;
+            }
+            
+            #button{
+                cursor:pointer;
+                content:url(light1.png);
+                height: 50px;
+                weight: 50px;
+                position:absolute;
+                z-index:100; 
+            }
+            #font{
+                color: black;
+            }
+            </STYLE>
+    </HEAD>
+    <BODY id="bodyStyle">
+        <div id="border">
+        <div id="button"></div>
+            <li><font id="font">I’ve made thinking about him an art form. I’ve had plenty of time to practice and perfect my craft in the years we’ve been together: I paint his profile into the swirling, maze-like shapes that draw themselves on the backs of my eyelids when I shut them tight; I compose music that sounds like the brown of his eyes, so deep and mesmerising that looking into them can feel like drowning. I’ve written odes to his lips, hymns to his hands, an elegy to the feel of him leaving the bed every morning, the loss of that sacred warmth. I think about him intentionally, when things are slow at work and I’m bored out of my mind. I think about him idly, when I’m on the bus, headed back to him. I think about him when he’s next to me, and when he’s not. I think about him when I’m in the shower and when I can’t fall asleep.</font></li>
+        </div>
+        <SCRIPT>
+            var lBorder = document.querySelector("#border");
+            var lButton = document.querySelector("#button");
+            var fonts = document.querySelector("#font");
+            
+            lButton.addEventListener('mouseover',()=>lButton.style.content=url(light2.png));
+            lButton.addEventListener('mouseout',()=>lButton.style.content=url(light1.png));
+            
+            //double click to turn off the light
+            lButton.addEventListener('dblclick',function (e) {
+                if(lBorder.style.background=='black'){
+                    lBorder.style.background='white';
+                    fonts.style.color='black';
+                } else{
+                    lBorder.style.background='black';
+                    fonts.style.color='white';
+                }
+            });
+                                    
+            
+            //image and mouse position
+            var mouseX;
+            var mouseY;
+            var objX;
+            var objY;
+            
+            //orig
+            var startObjX, startObjY;
+            
+            //object starts
+            function e(event){
+                if(!event){
+                    event = window.event;
+                    event.target = event.srcElement;
+                    event.layerX = event.offsetX;
+                    event.layerY = event.offsetY;
+                }
+                // calculate x position(left and right)
+                event.mouseX = event.pageX || event.clientX + document.body.scrollLeft; 
+                // calculate y position(up and down)
+                event.mouseY = event.pageY || event.clientY + document.body.scrollTop; 
+
+                //return the position
+                return event;
+            }
+            //when clicked
+            lButton.onmousedown = function(event){
+                event = e(event);
+                o = event.target; 
+                objX = parseInt(o.offsetLeft); 		
+                objY = parseInt(o.offsetTop); 		
+                mouseX = event.mouseX; 			
+                mouseY = event.mouseY; 
+                document.onmousemove = move; 
+                
+                //change the size when clicks
+                lButton.style.width = "60px";
+                lButton.style.height = "60px";
+                document.onmouseup = stop; 	
+            }
+
+
+            function move(event) {
+                event = e(event);   
+                //get the object position
+                var Left = objX + event.mouseX - mouseX;
+                var Top = objY + event.mouseY - mouseY;
+                
+                //check if reach left or right border
+                if (Left < 0) {
+                 Left = 0;
+                } else if (Left > lBorder.offsetWidth - lButton.offsetWidth) {
+                    Left = lBorder.offsetWidth - lButton.offsetWidth;
+                }
+                //check if reach up and down border
+                if (Top < 0) {
+                 Top = 0;
+                } else if (Top > lBorder.offsetHeight - lButton.offsetHeight) {
+                 Top = lBorder.offsetHeight - lButton.offsetHeight;
+                }
+                
+                //final position
+                o.style.left = Left + 'px';
+                o.style.top = Top + 'px';
+                
+            }
+
+            function stop(event){ 						
+                event = e(Event);
+                //change back the size
+                lButton.style.width = "50px";
+                lButton.style.height = "50px";
+                
+                o = null;
+                document.onmousemove = null;
+                document.onmouseup = null; 
+                
+            }
+
+        </SCRIPT>
+    </BODY>
+</HTML>

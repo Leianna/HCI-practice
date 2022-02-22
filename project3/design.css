@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+body{
+    width: 100%;
+    position: relative;
+    background: url(Zoo-Animals.jpg),#f8ebe9;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+}
+.systemTitle{
+    margin-top: 50px
+        width: 100%;
+    text-align: center;
+    padding: 20px;
+    color:#e6e8ec;
+    letter-spacing: 3px;
+    border: 3px solid #779d90;
+    background-color: #779d90;
+    font-family: 'Comfortaa', cursive;
+
+}
+/*------ arrange -------*/
+.row1{
+    display: flex;
+    margin-top: 70px;
+    margin-right: auto; 
+    margin-left: auto; 
+    width: 800px;
+    margin-bottom: 250px;
+}
+.column1{
+    width:250px;
+    background: #acc6d2;
+    margin-right: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.column2{
+    width:250px;
+    background: #acc6d2;
+    margin-right: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.column3{
+    width:250px;
+    background: #acc6d2;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;  
+}
+
+/*------ header -------*/
+.sections1,.sections2,.sections3{
+    color:white;
+    text-transform:capitalize;
+    margin-bottom: 10px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 30PX;
+}
+
+.sections1-2,.sections2-2,.sections3-2{
+    color:#5d85aa;
+    width: 80%;
+    margin-top: 0px;
+    line-height: 20px;
+    text-transform:capitalize;
+    font-size: 18px;
+   font-family: 'Baloo 2', cursive;
+}
+.accordion1,.accordion2,.accordion3,.accordion4,.accordion5,.accordion6,.accordion7,.accordion8 {
+    background-color: #91b9ce; 
+    color: #34465e;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.accordion1:hover,.accordion2:hover,.accordion3:hover,.accordion4:hover,.accordion5:hover,.accordion6:hover,.accordion7:hover,.accordion8:hover {
+    background-color: #77a2b8;
+}
+
+.accordion1:active,.accordion2:active,.accordion3:active,.accordion4:active,.accordion5:active,.accordion6:active,.accordion7:active,.accordion8:active {
+    background-color: #5f899f;
+}
+
+.control1,.control2,.control3,.control4,.control5,.control6,.control7,.control8{
+    padding: 0 18px;
+    display: none;
+    background-color: #adc6d2; 
+    overflow: hidden;
+}
+
+.discribtion{
+    position: absolute;
+    left: 70px;
+    top:25%;
+    width: 150px;
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;  
+    
+}
+
+.selection1-1,.selection1-2,.selection2-1,.selection2-2,.selection3-1,.selection3-2{
+    width: 100px;
+    height: 40;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    border-radius: 10px;
+    background-color: #e4ada2;
+    border-style:solid;
+    border-color: #e4ada2;
+    color: #f7ebe9;
+    font-family: 'Baloo 2', cursive;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.selection1-1:hover,.selection1-2:hover,.selection2-1:hover,.selection2-2:hover,.selection3-1:hover,.selection3-2:hover{ 
+    border-color: #f7ebe8;
+}
+
+.selection1-1:active,.selection1-2:active,.selection2-1:active,.selection2-2:active,.selection3-1:active,.selection3-2:active{
+    background-color: #d19285;
+    border-color: #e8cfc8;
+}
+/*------ information -------*/
+.control-border{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+    
+
+.switch:hover{
+    color: #5a739c;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+    font-family: 'ABeeZee', sans-serif;
+    color: #34465e;
+}
+ 
+
+/*.switch input {display:none;}*/
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #db6c62;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 35px;
+}
+/*------ slider position ------*/
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+/*------ slider color -------*/
+input:checked + .slider {
+    background-color: #67c3a4;
+}
+
+/*------ ON and OFF ---------*/
+.slider:after{
+    content:'OFF';
+    color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 70%;
+    font-size: 10px;
+}
+
+input:checked + .slider:after{  
+    content:'ON';
+    top: 50%;
+    right: -40px;
+}
+
+/*--------------------------------*/
+.animal1A,.animal1M,.animal2A,.animal2M,.animal3A,.animal3M{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer; 
+    min-height: 5px;   
+    background-color: #789e91;   
+    border: 1px solid #95b6ad;   
+    color: #fff;           
+    margin: 0;   
+    cursor: pointer;
+    line-height: normal;
+    text-align: center;
+
+}
+.animal1I,.animal2I,.animal3I{
+    width:40px;
+    height: 25px;
+    background-color: #e6e8ec;
+    border: 1px solid #789e91;
+    border-radius: 5px;
+    color: #779d90;
+    font-size-adjust: auto;
+    font-family: 'Baloo 2', cursive;
+    position: center;
+}
+.animal1Date,.animal2Date,.animal3Date{
+    color: #e6e8ec;
+}
+
+.animal1feed, .animal2feed, .animal3feed{
+    width: 100px;
+    height: 25px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-radius: 7px;
+    background-color: #e4ada2;
+    border-style:solid;
+    border-color: #e4ada2;
+    color: #f7ebe9;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Baloo 2', cursive;
+}
+
+.animal1feed:hover, .animal2feed:hover, .animal3feed:hover{
+    border-color: #f7ebe8;
+}
+
+.animal1feed:active, .animal2feed:active, .animal3feed:active{
+    background-color: #d19285;
+    border-color: #e8cfc8;
+}
+.animal1FeedError{
+    font-size: 13px;
+}
+
+/*-----------------------------*/
+.schedule1{
+    margin-top: 10px;
+}
+.scheduleDiscription{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #679185;
+
+}
+.fDateLabel,.tDateLabel{
+    color: #679185;
+    font-weight: bold;
+    font-family: 'Baloo 2', cursive;
+}
+.header1{
+    text-align: center;
+}
+.fromtime,.totime{
+    margin-bottom: 3px;
+    width: 150px;
+    padding: 2px 2px;
+    color: #779d90;
+    background-color: #e6e8ec;
+    border: 1px solid #789e91;
+    border-radius: 5px;
+    font-family: 'Baloo 2', cursive;
+}
+.fromDate,.toDate{
+    margin-bottom: 5px;
+    width: 150px;
+    padding: 2px 2px;
+    color: #779d90;
+    background-color: #e6e8ec;
+    border: 1px solid #789e91;
+    border-radius: 5px;
+    font-family: 'Baloo 2', cursive;
+}
+.ok,.reset{
+    width: 100%;
+    height: 30;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    background-color: #e4ada2;
+    border-style:solid;
+    border-color: #e4ada2;
+    color: #f7ebe9;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Baloo 2', cursive;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+.ok:hover,.reset:hover{
+    border-color: #f7ebe8;
+}
+
+.ok:active,.reset:active{
+    background-color: #d19285;
+    border-color: #e8cfc8;
+}
+
+.checkbox1-1{
+    border: 2px solid #e6e8ec;
+    font-family: 'Baloo 2', cursive;
+}
+
+.checkbox1-2{
+    margin-top: 10px;
+    border: 2px solid #e6e8ec;
+    margin-bottom: 20px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.checkboxD{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #679185;
+    font-size: 18px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.lightL1,.lightL2,.lightL3,.lightL4,.parkL1,.parkL2,.parkL3{
+    color: #679185;
+    font-size: 16px;
+}
+
+.lightL1:hover,.lightL2:hover,.lightL3:hover,.lightL4:hover,.parkL1:hover,.parkL2:hover,.parkL3:hover{
+    font-weight: bold;
+    color: #4f7367;
+}
+
+
+.{
+    color: #679185;
+    font-size: 16px;
+}
+
+p{ 
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 1px;
+    color: #db6c62;
+    font-family: 'Baloo 2', cursive;
+}
+.animal1FeedCount,.animal2FeedCount,.animal3FeedCount{
+    color: #679185;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+/*--------------------------*/
+/* The actual popup */
+
+/* The actual popup */
+.popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.ok .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}

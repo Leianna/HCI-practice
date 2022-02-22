@@ -1,0 +1,38 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>Create Account</title>  
+        <!--        link to css-->
+        <link rel="stylesheet" type="text/css" href="style.css"/> 
+
+    </head>  
+    <body>
+        <div class="modal">
+            <h1><font color="#ffffff">CREATE ACCOUNT</font></h1> 
+            <div class="container">
+                <form name="accountInfo" method="post">  
+                    <label for="fname"><font color="#ffffff">Username</font></label><br>
+                    <input type="text" required="required" placeholder="Click and enter username" class="user" name="fuser">
+                    <p id="usernameError"></p>
+                    <br>
+                    <label for="fname"> <font color="#ffffff">Email</font></label><br>
+                    <input type="text" required="required" placeholder="Click and enter email" class="email" name="femail">
+                    <p id="emailError"></p>
+                    <br>
+                    <label for="fname"><font color="#ffffff">Password</font></label><br>
+                    <input type="password" required="required" placeholder="Click and enter password" class="password" name="fpass">
+                    <p id="passwordError"></p>
+                    <br><br>
+                </form>
+            </div>
+            <div class="container">
+
+                <button class="createAcctButton" onclick="submit()">Click to Create Account</button> 
+                <p id="successCreate"></p>
+
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>  
+</html>

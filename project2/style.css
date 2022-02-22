@@ -1,0 +1,80 @@
+body{   
+    width: 100%;   
+    height: 100%;   
+    font-family: 'Open Sans',sans-serif;   
+    margin: 0;   
+    background-color: #f1e1da;   
+}   
+
+
+h1{   
+    text-align: center;
+    letter-spacing:1px;  
+}  
+
+lable{
+    font-size: 13px;
+    font-style: normal;
+    margin: 100px;
+}
+
+p{ 
+    font-style: italic;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 1px;
+}
+
+.modal {
+  background-color: #6c5b7b;
+  margin: 10px auto 10px auto; 
+  padding: 20px;
+  border: 2px solid #888;
+  width: 370px;
+}
+
+input{  
+    width: 345px;   
+    height: 20px;   
+    outline: none;   
+    padding: 10px;   
+    font-size: 13px; 
+    color: #6c5b7b;      
+    border: 1px solid #56536A;    
+    border-radius: 5px;  
+    background-color: #f9f7e8;   
+    text-indent: 20px;
+} 
+
+.user{
+    background-image: url(user.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size:20px 20px;
+}
+.email{
+    background-image: url(email.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size:20px 20px;
+}
+.password{
+    background-image: url(password.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size:20px 20px;
+}
+.createAcctButton{   
+    width: 365px;   
+    min-height: 20px;   
+    display: block;   
+    background-color: #61bfad;   
+    border: 1px solid #74cfcd;   
+    color: #fff;   
+    padding: 9px 14px;   
+    font-size: 15px;   
+    line-height: normal;   
+    border-radius: 5px;   
+    margin: 0;   
+    cursor: pointer;
+} 
